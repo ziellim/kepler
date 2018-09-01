@@ -9,7 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import { PricingsComponent } from './pricings/pricings.component';
 import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './/app-routing.module';
     RegisterComponent,
     BlogComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
