@@ -3,30 +3,30 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { PricingsComponent } from './pricings/pricings.component';
-import { TeamsComponent } from './teams/teams.component';
+import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PricingsComponent } from './pricings/pricings.component';
 import { BlogComponent } from './blog/blog.component';
-import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
-import { MainComponent } from './main/main.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PricingsComponent,
-    TeamsComponent,
     LoginComponent,
     RegisterComponent,
     BlogComponent,
-    FaqComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    NotfoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
