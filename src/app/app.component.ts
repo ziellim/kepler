@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'kepler';
   constructor(private _router: Router) { }
   hasFooter(){
-    const routesWithHeader = ['/home'];
+    const routesWithHeader = ['/home','/pricing'];
     return routesWithHeader.includes(this._router.url);
   }
 }
