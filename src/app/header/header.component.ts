@@ -12,7 +12,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  isDark(){
+
+  isDark() {
     const routesWithDarkCss = ['/home','/pricing'];
     return routesWithDarkCss.includes(this._router.url);
   }
