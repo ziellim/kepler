@@ -1,61 +1,142 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-transparent py-3" id="navbar_main" [ngClass]="{'navbar-dark bg-dark':isDark(),'navbar-light bg-white':!isDark()}">
+<header class="header-transparent" id="header-main">
+  <!-- SEARCH -->
+  <div id="search-main" class="navbar-search">
     <div class="container">
-      <a class="navbar-brand mr-lg-5" routerLink="/home"><strong>Kepler</strong></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_main_collapse" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Search Input -->
+      <form class="navbar-search-form" role="form">
+        <div class="form-group">
+          <div class="input-group input-group-transparent">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="far fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Type and hit enter ...">
+          </div>
+        </div>
+      </form>
+      <!-- Search Dropdown -->
+      <div class="navbar-search-suggestions">
+        <h6>Search Suggestions</h6>
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="list-unstyled mb-0">
+              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
+              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>iphone 8</span> in Smartphones</a></li>
+              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
+              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>beats pro solo 3</span> in Headphones</a></li>
+              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>smasung galaxy 10</span> in Phones</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TOPBAR -->
+  <div id="navbar-top-main" class="navbar-top border-bottom" [ngClass]="{'navbar-dark bg-dark':isDark(),'navbar-light bg-white':!isDark()}">
+    <div class="container">
+      <div class="navbar-nav align-items-center">
+        <!-- <div class="d-none d-lg-inline-block"><span class="navbar-text mr-3">Purpose - Website UI Kit</span></div> -->
+        <div>
+          <ul class="nav">
+            <li class="nav-item dropdown ml-lg-2 dropdown-animate" data-toggle="hover">
+              <!-- Current Language -->
+              <a class="nav-link px-0" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img alt="Image placeholder" src="assets/img/icons/flags/us.svg">
+                <span class="d-none d-lg-inline-block">United States</span>
+                <span class="d-lg-none">EN</span>
+              </a>
+              <!-- Dropdown Languages -->
+              <div class="dropdown-menu dropdown-menu-sm dropdown-menu-arrow">
+                <a href="/" class="dropdown-item"><img alt="Spanish" src="assets/img/icons/flags/es.svg">Spanish</a>
+                <a href="/" class="dropdown-item"><img alt="Romanian" src="assets/img/icons/flags/ro.svg">Romanian</a>
+                <a href="/" class="dropdown-item"><img alt="Greek" src="assets/img/icons/flags/gr.svg">Greek</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="ml-auto">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="/">Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="/"  data-action="search-open" data-target="#search-main"><i class="far fa-search"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="/"><i class="far fa-shopping-cart"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="/"><i class="far fa-user-circle"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN NAVBAR -->
+  <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-transparent" id="navbar-main" [ngClass]="{'navbar-dark bg-dark':isDark(),'navbar-light bg-white':!isDark()}">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand mr-lg-5" href="/home"><img alt="Kepler" src="assets/img/brand/logo_light.png" style="height:30px;"></a>
+      <!-- Menu Mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar_main_collapse">
+      <!-- Menu Desktop -->
+      <div class="collapse navbar-collapse" id="navbar-main-collapse">
+        <!-- Right Menu -->
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" routerLink="/home" routerLinkActive="active">Accueil</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" routerLinkActive="active" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="dropdown-menu dropdown-menu-lg py-0">
-              <div class="list-group list-group-flush">
-                <a routerLink="#" class="list-group-item list-group-item-action">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pricing" routerLinkActive="active" role="button">Pricing</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+            <a class="nav-link" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-arrow py-0">
+              <div class="list-group">
+                <a href="/" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
-                    <img src="assets/img/icons/dusk/svg/browser-window.svg" class="img-saturate" style="width: 60px;">
+                    <img alt="#" src="assets/img/icons/dusk/svg/browser-window.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
-                      <h2 class="heading h6 mb-1">Landing Pages</h2>
+                      <h6 class="mb-1">Landing Pages</h6>
                       <p class="mb-0">A great point to start from.</p>
                     </div>
                   </div>
                 </a>
-                <a routerLink="#" class="list-group-item list-group-item-action">
+                <a href="/" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
-                    <img src="assets/img/icons/dusk/svg/details-popup.svg" class="img-saturate" style="width: 60px;">
+                    <img alt="#" src="assets/img/icons/dusk/svg/ios-photos.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
-                      <h2 class="heading h6 mb-1">Secondary Pages</h2>
+                      <h6 class="mb-1">Secondary Pages</h6>
                       <p class="mb-0">Build your website with these demos.</p>
                     </div>
                   </div>
                 </a>
-                <a routerLink="#" class="list-group-item list-group-item-action">
+                <a href="/" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
-                    <img src="assets/img/icons/dusk/svg/form.svg" class="img-saturate" style="width: 60px;">
+                    <img alt="#" src="assets/img/icons/dusk/svg/maintenance.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
-                      <h2 class="heading h6 mb-1">Account Pages</h2>
-                      <p class="mb-0">User account management made easy.</p>
+                      <h6 class="mb-1">Account Pages</h6>
+                      <p class="mb-0">Account management made easy.</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="/" class="list-group-item list-group-item-action">
+                  <div class="media d-flex align-items-center">
+                    <img alt="Image placeholder" src="assets/img/icons/dusk/svg/in-progress.svg" class="img-saturate" style="width:50px;">
+                    <div class="media-body ml-3">
+                      <h6 class="mb-1">Shop Pages</h6>
+                      <p class="mb-0">Explore the full ecommerce website flow.</p>
                     </div>
                   </div>
                 </a>
               </div>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/pricing" routerLinkActive="active" role="button">Pricing</a>
-          </li>
         </ul>
+        <!-- Left Menu -->
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
             <a class="nav-link" routerLink="/login" routerLinkActive="active">Connexion</a>
           </li>
           <li class="nav-item mr-0">
-            <a routerLink="/register" routerLinkActive="active" class="nav-link d-lg-none">Inscription</a>
-            <a routerLink="/register" class="btn btn-sm btn-white btn-circle btn-icon d-none d-lg-inline-flex" [ngClass]="{'btn-white ':isDark(),'btn-dark':!isDark()}">
-              <span class="btn-inner--icon"><i class="fa fa-user-circle"></i></span>
+            <a href="/" class="nav-link d-lg-none" routerLink="/register" routerLinkActive="active">Inscription</a>
+            <a href="/" class="btn btn-sm btn-white btn-circle btn-icon d-none d-lg-inline-flex" routerLink="/register" [ngClass]="{'btn-white ':isDark(),'btn-dark':!isDark()}">
+              <span class="btn-inner--icon"><i class="far fa-user-circle"></i></span>
               <span class="btn-inner--text">Inscription</span>
             </a>
           </li>
