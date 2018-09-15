@@ -11,6 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { RecoverComponent } from './recover/recover.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BlogComponent,
     FooterComponent,
     MainComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    RecoverComponent
   ],
   imports: [
     BrowserModule,
