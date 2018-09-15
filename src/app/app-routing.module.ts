@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RecoverComponent } from './recover/recover.component';
 import { MainComponent } from './main/main.component';
 import { PricingsComponent } from './pricings/pricings.component';
 import { BlogComponent } from './blog/blog.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'recover', component: RecoverComponent },
   { path: 'pricing', component: PricingsComponent },
   { path: 'blog', component: BlogComponent },
   { path: '404', component: NotfoundComponent },
