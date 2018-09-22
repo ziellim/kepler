@@ -19,11 +19,11 @@
         <div class="row">
           <div class="col-sm-6">
             <ul class="list-unstyled mb-0">
-              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
-              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>iphone 8</span> in Smartphones</a></li>
-              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
-              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>beats pro solo 3</span> in Headphones</a></li>
-              <li><a class="list-link" href="/"><i class="far fa-search"></i><span>smasung galaxy 10</span> in Phones</a></li>
+              <li><a routerLink="/home" class="list-link"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
+              <li><a routerLink="/home" class="list-link"><i class="far fa-search"></i><span>iphone 8</span> in Smartphones</a></li>
+              <li><a routerLink="/home" class="list-link"><i class="far fa-search"></i><span>macbook pro</span> in Laptops</a></li>
+              <li><a routerLink="/home" class="list-link"><i class="far fa-search"></i><span>beats pro solo 3</span> in Headphones</a></li>
+              <li><a routerLink="/home" class="list-link"><i class="far fa-search"></i><span>smasung galaxy 10</span> in Phones</a></li>
             </ul>
           </div>
         </div>
@@ -39,26 +39,26 @@
           <ul class="nav">
             <li class="nav-item dropdown ml-lg-2 dropdown-animate" data-toggle="hover">
               <!-- Current Language -->
-              <a class="nav-link px-0" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a routerLink="/home" class="nav-link px-0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img alt="Image placeholder" src="assets/img/icons/flags/us.svg">
                 <span class="d-none d-lg-inline-block">United States</span>
                 <span class="d-lg-none">EN</span>
               </a>
               <!-- Dropdown Languages -->
               <div class="dropdown-menu dropdown-menu-sm dropdown-menu-arrow">
-                <a href="/" class="dropdown-item"><img alt="Spanish" src="assets/img/icons/flags/es.svg">Spanish</a>
-                <a href="/" class="dropdown-item"><img alt="Romanian" src="assets/img/icons/flags/ro.svg">Romanian</a>
-                <a href="/" class="dropdown-item"><img alt="Greek" src="assets/img/icons/flags/gr.svg">Greek</a>
+                <a routerLink="/home" class="dropdown-item"><img alt="Spanish" src="assets/img/icons/flags/es.svg">Spanish</a>
+                <a routerLink="/home" class="dropdown-item"><img alt="Romanian" src="assets/img/icons/flags/ro.svg">Romanian</a>
+                <a routerLink="/home" class="dropdown-item"><img alt="Greek" src="assets/img/icons/flags/gr.svg">Greek</a>
               </div>
             </li>
           </ul>
         </div>
         <div class="ml-auto">
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link" href="/">Support</a></li>
-            <li class="nav-item"><a class="nav-link" href="/"  data-action="search-open" data-target="#search-main"><i class="far fa-search"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="/"><i class="far fa-shopping-cart"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="/"><i class="far fa-user-circle"></i></a></li>
+            <li class="nav-item"><a routerLink="/home" class="nav-link">Support</a></li>
+            <li class="nav-item"><a routerLink="/home" class="nav-link" data-action="search-open" data-target="#search-main"><i class="far fa-search"></i></a></li>
+            <li class="nav-item"><a routerLink="/home" class="nav-link"><i class="far fa-shopping-cart"></i></a></li>
+            <li class="nav-item"><a routerLink="/home" class="nav-link"><i class="far fa-user-circle"></i></a></li>
           </ul>
         </div>
       </div>
@@ -68,7 +68,7 @@
   <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-transparent" id="navbar-main" [ngClass]="{'navbar-dark bg-dark':isDark(),'navbar-light bg-white':!isDark()}">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand mr-lg-5" href="/home"><img alt="Kepler" [src]="isDark() ? 'assets/img/brand/logo_light.png' : 'assets/img/brand/logo_dark.png'" style="height:30px;"></a>
+      <a routerLink="/home" class="navbar-brand mr-lg-5"><img alt="Kepler" [src]="isDark() ? 'assets/img/brand/logo_light.png' : 'assets/img/brand/logo_dark.png'" style="height:30px;"></a>
       <!-- Menu Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -78,17 +78,17 @@
         <!-- Right Menu -->
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active">Accueil</a>
+            <a routerLink="/home" routerLinkActive="active" class="nav-link">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/pricing" routerLinkActive="active" role="button">Pricing</a>
+            <a routerLink="/pricing" routerLinkActive="active" class="nav-link" role="button">Pricing</a>
           </li>
           <!-- Dropdown -->
           <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
-            <a class="nav-link" href="/" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+            <a routerLink="/home" class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-arrow py-0">
               <div class="list-group">
-                <a href="/" class="list-group-item list-group-item-action">
+                <a routerLink="/home" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
                     <img alt="#" src="assets/img/icons/dusk/svg/browser-window.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
@@ -97,7 +97,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="/" class="list-group-item list-group-item-action">
+                <a routerLink="/home" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
                     <img alt="#" src="assets/img/icons/dusk/svg/ios-photos.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
@@ -106,7 +106,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="/" class="list-group-item list-group-item-action">
+                <a routerLink="/home" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
                     <img alt="#" src="assets/img/icons/dusk/svg/maintenance.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
@@ -115,7 +115,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="/" class="list-group-item list-group-item-action">
+                <a routerLink="/home" class="list-group-item list-group-item-action">
                   <div class="media d-flex align-items-center">
                     <img alt="Image placeholder" src="assets/img/icons/dusk/svg/in-progress.svg" class="img-saturate" style="width:50px;">
                     <div class="media-body ml-3">
@@ -131,11 +131,11 @@
         <!-- Left Menu -->
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login" routerLinkActive="active">Connexion</a>
+            <a routerLink="/login" routerLinkActive="active" class="nav-link">Connexion</a>
           </li>
           <li class="nav-item mr-0">
-            <a href="/" class="nav-link d-lg-none" routerLink="/register" routerLinkActive="active">Inscription</a>
-            <a href="/" class="btn btn-sm btn-white btn-circle btn-icon d-none d-lg-inline-flex" routerLink="/register" [ngClass]="{'btn-white ':isDark(),'btn-dark':!isDark()}">
+            <a routerLink="/register" routerLinkActive="active" class="nav-link d-lg-none">Inscription</a>
+            <a routerLink="/register" [ngClass]="{'btn-white ':isDark(),'btn-primary':!isDark()}" class="btn btn-sm btn-white btn-circle btn-icon d-none d-lg-inline-flex">
               <span class="btn-inner--icon"><i class="far fa-user-circle"></i></span>
               <span class="btn-inner--text">Inscription</span>
             </a>
