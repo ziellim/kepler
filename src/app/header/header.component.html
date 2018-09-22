@@ -68,7 +68,7 @@
   <nav class="navbar navbar-main navbar-expand-lg navbar-fixed-top navbar-transparent" id="navbar-main" [ngClass]="{'navbar-dark bg-dark':isDark(),'navbar-light bg-white':!isDark()}">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand mr-lg-5" href="/home"><img alt="Kepler" src="assets/img/brand/logo_light.png" style="height:30px;"></a>
+      <a class="navbar-brand mr-lg-5" href="/home"><img alt="Kepler" [src]="isDark() ? 'assets/img/brand/logo_light.png' : 'assets/img/brand/logo_dark.png'" style="height:30px;"></a>
       <!-- Menu Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
